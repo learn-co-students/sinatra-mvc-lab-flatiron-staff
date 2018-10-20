@@ -47,7 +47,7 @@ describe "Pig Latinizer App" do
   describe "POST '/piglatinize' again" do
     before do
       post '/piglatinize', {
-        "user_phrase"=> "He was an old man who fished alone in a skiff in the Gulf Stream and he had gone eighty four days now without taking a fish"
+        "user_phrase"=> "He was an old man"
       }
     end
 
@@ -56,7 +56,7 @@ describe "Pig Latinizer App" do
     end
 
     it "displays the pig latinized phrase upon form submission" do
-      expect(last_response.body).to include("eHay asway anway oldway anmay owhay ishedfay aloneway inway away iffskay inway ethay ulfGay eamStray andway ehay adhay onegay eightyway ourfay aysday ownay ithoutway akingtay away ishfay")
+      expect(last_response.body).to include("eHay asway anway oldway anmay")
     end
   end
 
